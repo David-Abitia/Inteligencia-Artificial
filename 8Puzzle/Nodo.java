@@ -36,9 +36,7 @@ public class Nodo {
     }
 
     public Collection<String> generaHijos() {
-        //|0|1|2|
-        //|3|4|5|   Indices
-        //|6|7|8|
+
     	ArrayList<String>hijosGenerados=new ArrayList<>();
         int i = estado.indexOf(" ");//Obtengo el indice del espacio
         String estadoTemp;
@@ -171,26 +169,6 @@ public class Nodo {
         return hijosGenerados;
     }
     
-    
-//    public String imprimirSolucion() 
-//    {
-//    	String Solucion = "";
-//    	return imprimirSolucion(Solucion);
-//    }
-//    
-//    public String imprimirSolucion(String Solucion)
-//    {
-//    	if(this.padre != null) 
-//    	{
-//    		
-//    		Solucion = padre.imprimirSolucion(estado+"\n"+Solucion);
-//    	}
-//    	else 
-//    	{
-//    		Solucion = nodoA +"\n"+ Solucion;
-//    	}
-//    	return Solucion;
-//    }
     
   public String imprimirSolucion() 
   {
