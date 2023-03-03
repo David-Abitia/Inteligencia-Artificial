@@ -149,10 +149,46 @@ public class ArbolBusqueda {
         return com;
     }
 
-	public int terceraHeuristica(String est) 
-	{
-		return 0;
-	}
+    public int terceraHeuristica(String est) 
+    {
+        int horizontal = 0, vertical = 0;
+        int Objhtzl = 0, Objver = 0;
+        int retornar = 0;
+
+
+        retornar = 0;
+        horizontal =  (int)est.charAt(0)  +  (int)est.charAt(1)  +  (int) est.charAt(2);
+        Objhtzl =  (int) objetivo.charAt(0)  +  (int) objetivo.charAt(1)  +  (int) objetivo.charAt(2);
+        retornar += Math.abs(horizontal - Objhtzl);
+
+
+        horizontal =  (int)est.charAt(3)  +  (int)est.charAt(4)  +  (int) est.charAt(5);
+        Objhtzl =  (int) objetivo.charAt(3)  +  (int) objetivo.charAt(4)  +  (int) objetivo.charAt(5);
+        retornar += Math.abs(horizontal - Objhtzl);
+
+        
+        horizontal =  (int)est.charAt(6)  +  (int)est.charAt(7)  +  (int) est.charAt(8);
+        Objhtzl =  (int) objetivo.charAt(6)  +  (int) objetivo.charAt(7)  +  (int) objetivo.charAt(8);
+        retornar += Math.abs(horizontal - Objhtzl);
+
+        
+        vertical =  (int)est.charAt(0)  +  (int)est.charAt(3)  +  (int) est.charAt(6);
+        Objver =  (int)objetivo.charAt(0)  +  (int)objetivo.charAt(3)  +  (int) objetivo.charAt(6);
+        retornar += Math.abs(vertical - Objver);
+
+        
+        vertical =  (int)est.charAt(1)  +  (int)est.charAt(4)  +  (int) est.charAt(7);
+        Objver =  (int)objetivo.charAt(1)  +  (int)objetivo.charAt(4)  +  (int) objetivo.charAt(7);
+        retornar += Math.abs(vertical - Objver);
+
+        
+        vertical =  (int)est.charAt(2)  +  (int)est.charAt(5)  +  (int) est.charAt(8);
+        Objver =  (int)objetivo.charAt(2)  +  (int)objetivo.charAt(5)  +  (int) objetivo.charAt(8);
+        retornar += Math.abs(vertical - Objver);
+
+        
+        return retornar;
+    }
     
 	//Busqueda Heuristica 
     public void heuristicaBusqueda(int Heuristica)
