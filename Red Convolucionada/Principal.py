@@ -1,5 +1,9 @@
-from face_recognition import FaceRecognition
+#
+
+from face_recognition import dlib
 
 if __name__ == '__main__':
-    fr = FaceRecognition()
+    fr = dlib()
     fr.run_recognition()
+
+    #--------------------------------------------------------------
